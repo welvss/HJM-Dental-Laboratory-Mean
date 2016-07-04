@@ -1,7 +1,9 @@
 <div ng-controller="AuthenticationController">
-  <h3 class="col-md-12 text-center">Or with your account</h3>
-  <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
-    <form name="userForm" ng-submit="signin(userForm.$valid)" class="signin" novalidate autocomplete="off">
+  <img src="/modules/core/client/img/log-in.jpg" class="bg">
+  <div class="form-login">
+    <h2 class="form-login-heading">Sign in now</h2>
+    <div class="login-wrap">
+      <form name="userForm" ng-submit="signin(userForm.$valid)" class="signin ui form" novalidate autocomplete="off">
       <fieldset>
         <div class="form-group" show-errors>
           <label for="username">Username</label>
@@ -18,17 +20,18 @@
           </div>
         </div>
         <div class="text-center form-group">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="ui teal button"><i class="lock icon"></i>Sign in</button>
           &nbsp; or&nbsp;
           <a ui-sref="authentication.signup">Sign up</a>
         </div>
         <div class="text-center forgot-password">
           <a ui-sref="password.forgot">Forgot your password?</a>
         </div>
-        <alert type="danger" ng-show="error" class="text-center text-danger">
-          <span ng-bind="error"></span>
-        </alert>
+        <div type="danger" ng-show="error" class="ui negative message">
+          <i class="warning sign icon"></i><span ng-bind="error"></span>
+        </div>
       </fieldset>
     </form>
+    </div>
   </div>
 </div>

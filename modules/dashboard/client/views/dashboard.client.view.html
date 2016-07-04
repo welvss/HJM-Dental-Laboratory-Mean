@@ -1,0 +1,35 @@
+<section>
+  <div class="row">
+  	<div class="ui vertical segment">
+			  <div class="ui huge header">Welcome, Administrator!</div>
+			  <p>{{date | date:'yyyy-MM-dd'}}</p>
+	</div>
+	<hr>
+	<div class="ui five doubling cards">
+		<div class="card hvr-grow" ng-repeat="navModule in navModules">
+			<div class="card-content">
+				<div class="box" ng-class="navModule.colorClass">
+					<h1 class="box-content"><i ng-class="navModule.icon"class="icon"></i></h1>
+				</div>
+			</div>
+			<div class="content">
+				<div class="header">{{navModule.name}}</div>
+				<a href="#" class="hvr-icon-forward">View or Add New Customer</a>
+			</div>
+		</div>
+	</div>
+	<div class="ui segment">
+		<div class="ui large header">Case Status</div>
+		<div class="ui statistics">
+			<div ng-class="caseStatus.color"class="statistic" ng-repeat="caseStatus in caseStatutes">
+				<div class="value">
+				  <i ng-class="caseStatus.icon"class="icon hvr-wobble-vertical"></i> 23
+				</div>
+				<div class="label">
+				  <a href="#">{{caseStatus.label}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</section>
